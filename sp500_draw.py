@@ -33,7 +33,7 @@ ma = pd.rolling_mean(pcr, 13)
 ma = ma[interested_range:]
 
 ax2 = plt.subplot(3,1,3, sharex=ax1)
-ax2.plot(ma, label='ma')
+ax2.plot(ma, label='pcr ma')
 plt.legend(loc='upper left')
 
 
