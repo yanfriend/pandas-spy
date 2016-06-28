@@ -48,3 +48,12 @@ plt.legend(loc='upper left')
 
 plt.show()
 
+
+# tried regression below, tested in ipython
+import statsmodels.api as sm
+import pandas as pd
+from pandas.stats.api import ols
+
+df = pd.DataFrame({"A": [10,20,30,40,50], "B": [20, 40, 60, 80, 100], "C": [32, 234, 23, 23, 42523]})
+res = ols(y=df['A'], x=df[['B']])
+
