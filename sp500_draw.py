@@ -35,7 +35,7 @@ pcr = pcr['P/C Ratio']
 
 ma = pd.rolling_mean(pcr, 13)
 ma = ma[interested_range:]
-print ma.tail()
+print ma.tail(26)
 
 ax3 = plt.subplot(3,1,3, sharex=ax1)
 ax3.yaxis.tick_right()
