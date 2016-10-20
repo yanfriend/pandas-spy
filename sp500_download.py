@@ -1,17 +1,17 @@
 import datetime
 import pandas as pd
-import pandas.io.data
+from pandas_datareader import data as web
 
 import urllib
 
 start_date = datetime.datetime(2000, 10, 1)
-end_date = datetime.datetime(2016, 12, 31)
+end_date = datetime.datetime.now()
 
-sp500 = pd.io.data.get_data_yahoo('%5EGSPC', start=start_date, end=end_date)
+sp500 = web.DataReader('^GSPC', 'yahoo', start=start_date, end=end_date)
 print sp500.tail()
 sp500.to_csv('sp500.csv')
 
-vix = pd.io.data.get_data_yahoo('%5EVIX', start=start_date, end=end_date)
+vix = web.DataReader('^VIX', 'yahoo', start=start_date, end=end_date)
 vix.to_csv('vix.csv')
 print vix.tail()
 

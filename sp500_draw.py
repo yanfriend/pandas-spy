@@ -1,6 +1,5 @@
 import datetime
 import pandas as pd
-import pandas.io.data
 
 from pandas import DataFrame
 import matplotlib.pyplot as plt
@@ -41,10 +40,6 @@ ax3 = plt.subplot(3,1,3, sharex=ax1)
 ax3.yaxis.tick_right()
 ax3.plot(ma, label='pcr ma')
 plt.legend(loc='upper left')
-
-
-#from matplotlib.widgets import Cursor
-#cursor = Cursor(ax1, useblit=True, color='red', linewidth=2 )  # need improve
 
 plt.show()
 
