@@ -1,2 +1,5 @@
 nose
 sphinx
+pandas_datareader
+fix_yahoo_finance
+matplotlib

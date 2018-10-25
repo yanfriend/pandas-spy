@@ -33,7 +33,9 @@ pcr = pd.read_csv('equitypc.csv', index_col='DATE', parse_dates=True, skiprows=2
 pcr = pcr['P/C Ratio']
 print pcr.tail(13)
 
-ma = pd.rolling_mean(pcr, 13)
+# ma = pd.rolling_mean(pcr, 13)
+ma=pcr.rolling(13).mean()
+
 ma = ma[interested_range:]
 
 ax3 = plt.subplot(3,1,3, sharex=ax1)
