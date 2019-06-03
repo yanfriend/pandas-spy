@@ -1,5 +1,8 @@
 nose
 sphinx
 pandas_datareader
-fix_yahoo_finance
+# fix_yahoo_finance
+pandas
+yfinance
+pandas_datareader
 matplotlib
